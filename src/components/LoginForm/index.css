@@ -1,0 +1,51 @@
+.loginForm-container {
+  background-color: #000000;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-container {
+  padding: 40px;
+  padding-top: 20px;
+  background-color: #272727;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 300px;
+}
+.loginform-website-logo {
+  width: 100px;
+  align-self: center;
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  color: #ffffff;
+}
+.input-field {
+  margin-top: 10px;
+  background-color: transparent;
+  height: 30px;
+  border-radius: 6px;
+  padding-left: 10px;
+  border: 1px #64748b solid;
+  color: #ffffff;
+}
+.login-button {
+  margin-top: 30px;
+  border-radius: 6px;
+  height: 30px;
+  color: #ffffff;
+  background-color: #4f46e5;
+  border: none;
+  cursor: pointer;
+}
+.input-label {
+  font-size: 12px;
+  font-family: 'Roboto';
+}

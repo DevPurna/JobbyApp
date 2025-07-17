@@ -1,0 +1,22 @@
+.jobs-profile-container {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/profile-bg.png');
+  background-size: cover;
+  width: 300px;
+  height: 230px;
+  font-family: 'Roboto';
+  padding-left: 20px;
+  padding-top: 20px;
+  border-radius: 30px;
+  margin-bottom: 30px;
+}
+.profile-name {
+  color: #6366f1;
+}
+.profile-bio {
+  color: #2c364c;
+}
+.loader-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

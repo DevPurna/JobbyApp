@@ -1,0 +1,40 @@
+.JobCard-container {
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background-color: #272727;
+  padding: 20px;
+  font-family: 'Roboto';
+  width: 90%;
+}
+.logo-position-container {
+  display: flex;
+}
+.jobCard-company-logo {
+  margin-right: 20px;
+  width: 80px;
+  height: 80px;
+}
+.jobcard-title {
+  font-size: 22px;
+  font-family: 'Roboto';
+}
+.loaction-workType-package-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.loaction-workType-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 220px;
+}
+.jobCard-workType-icon {
+  margin-right: 5px;
+}
+.description-heading {
+  font-size: 20px;
+}
+.jobCard-jobDescription {
+  font-size: 16px;
+}

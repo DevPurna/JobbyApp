@@ -1,0 +1,65 @@
+.example-heading {
+  color: black;
+}
+.Jobs-background-container {
+  background-color: #121212;
+  background-size: cover;
+  color: #ffffff;
+}
+.jobs-and-sorting-container {
+  display: flex;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  justify-content: space-around;
+}
+.employmentTypesList-ul {
+  list-style-type: none;
+}
+.salaryRangesList-ul {
+  list-style-type: none;
+}
+
+.ul-listItem {
+  margin-top: 10px;
+}
+.jobs-search-element {
+  background-color: transparent;
+  height: 30px;
+  width: 90%;
+  border: none;
+}
+.job-search-bar {
+  background-color: #475569;
+  height: 100%;
+  padding-right: 15px;
+  color: #ffffff;
+  border: none;
+}
+.job-search-input-container {
+  margin-left: 50px;
+  height: 30px;
+  width: 50%;
+  background-color: transparent;
+  border: 1px solid #7e858e;
+  border-radius: 6px;
+  padding-left: 10px;
+}
+.jobs-list {
+  list-style-type: none;
+}
+.job-link {
+  text-decoration: none;
+  color: #ffffff;
+}
+.jobs-Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.jobsList-and-searchInput-BG-container {
+  width: 70%;
+}
