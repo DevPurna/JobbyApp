@@ -20,7 +20,7 @@ const JobCard = ({jobData}) => {
         <img
           src={companyLogoUrl}
           className="jobCard-company-logo"
-          alt="website logo"
+          alt="company logo"
         />
         <div className="rating-position-container">
           <h1 className="jobcard-title">{title}</h1>

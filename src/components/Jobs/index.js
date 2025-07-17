@@ -157,7 +157,7 @@ class Jobs extends Component {
         className="filure-img"
       />
       <h1>Oops! Something went wrong</h1>
-      <p>We cannot to seem to find the page youa are looking for</p>
+      <p>We cannot seem to find the page you are looking for</p>
       <button
         onClick={this.onClickRetry}
         type="button"

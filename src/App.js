@@ -1,3 +1,4 @@
+// App.js
 import {Switch, Route, Redirect} from 'react-router-dom'
 import LoginForm from './components/LoginForm'
 import Home from './components/Home'
@@ -7,8 +8,6 @@ import ProtectedRoute from './components/ProtectedRoute'
 import NotFound from './components/NotFound'
 
 import './App.css'
-
-// Replace your code here
 
 const App = () => (
   <Switch>

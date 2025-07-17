@@ -5,6 +5,8 @@ import Loader from 'react-loader-spinner'
 import {FaStar, FaExternalLinkAlt} from 'react-icons/fa'
 import {MdLocationOn, MdWork} from 'react-icons/md'
 
+import Header from '../Header'
+
 import './index.css'
 
 const apiStatusConstants = {
@@ -41,7 +43,6 @@ class JobDetails extends Component {
     if (response.ok) {
       const fetchedData = await response.json()
 
-      // Extract job details
       const jobDetailsData = {
         companyLogoUrl: fetchedData.job_details.company_logo_url,
         companyWebsiteUrl: fetchedData.job_details.company_website_url,
@@ -51,6 +52,7 @@ class JobDetails extends Component {
         location: fetchedData.job_details.location,
         packagePerAnnum: fetchedData.job_details.package_per_annum,
         rating: fetchedData.job_details.rating,
+        title: fetchedData.job_details.title,
         lifeAtCompany: {
           description: fetchedData.job_details.life_at_company.description,
           imageUrl: fetchedData.job_details.life_at_company.image_url,
@@ -61,7 +63,6 @@ class JobDetails extends Component {
         })),
       }
 
-      // Extract similar jobs
       const similarJobsData = fetchedData.similar_jobs.map(job => ({
         companyLogoUrl: job.company_logo_url,
         employmentType: job.employment_type,
@@ -83,7 +84,7 @@ class JobDetails extends Component {
   }
 
   renderLoader = () => (
-    <div className="loader-container-jobDetails">
+    <div className="loader-container" data-testid="loader">
       <Loader type="ThreeDots" color="#0b69ff" height="50" width="50" />
     </div>
   )
@@ -120,7 +121,7 @@ class JobDetails extends Component {
               alt="job details company logo"
             />
             <div className="rating-position-container">
-              <h1 className="jobcard-title">{similarJobs[0].title}</h1>
+              <h1 className="jobcard-title">{jobDetails.title}</h1>
               <p className="jobCard-rating">
                 <FaStar className="jobCard-rating-star-icon" />
                 {jobDetails.rating}
@@ -150,9 +151,8 @@ class JobDetails extends Component {
                 rel="noopener noreferrer"
                 className="visit-link-text"
               >
-                Visit
+                Visit <FaExternalLinkAlt />
               </a>
-              <FaExternalLinkAlt />
             </div>
           </div>
           <p className="jobCard-jobDescription">{jobDetails.jobDescription}</p>
@@ -188,13 +188,21 @@ class JobDetails extends Component {
               />
               <div>
                 <h1>{job.title}</h1>
-                <p>{job.rating}</p>
+                <p>
+                  <FaStar className="jobCard-rating-star-icon" /> {job.rating}
+                </p>
               </div>
               <h3>Description</h3>
               <p>{job.jobDescription}</p>
               <div>
-                <p>{job.location}</p>
-                <p>{job.employmentType}</p>
+                <p>
+                  <MdLocationOn className="jobCard-loaction-icon" />
+                  {job.location}
+                </p>
+                <p>
+                  <MdWork className="jobCard-workType-icon" />
+                  {job.employmentType}
+                </p>
               </div>
             </li>
           ))}
@@ -220,7 +228,10 @@ class JobDetails extends Component {
 
   render() {
     return (
-      <div className="job-details-container">{this.renderApiStatusCalls()}</div>
+      <div className="job-details-container">
+        <Header />
+        {this.renderApiStatusCalls()}
+      </div>
     )
   }
 }
