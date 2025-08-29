@@ -83,6 +83,7 @@ class JobDetails extends Component {
     }
   }
 
+  // eslint-disable-next-line class-methods-use-this
   renderLoader = () => (
     <div className="loader-container" data-testid="loader">
       <Loader type="ThreeDots" color="#0b69ff" height="50" width="50" />

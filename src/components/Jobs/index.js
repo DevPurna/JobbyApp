@@ -97,6 +97,7 @@ class Jobs extends Component {
     this.setState({activeSalaryRangeId: id}, this.getJobsList)
   }
 
+  // eslint-disable-next-line class-methods-use-this
   renderNoJobsView = () => (
     <div className="noJobsView-container">
       <img
@@ -168,6 +169,7 @@ class Jobs extends Component {
     </div>
   )
 
+  // eslint-disable-next-line class-methods-use-this
   renderLoader = () => (
     <div className="products-loader-container">
       <Loader type="ThreeDots" color="#0b69ff" height="50" width="50" />
