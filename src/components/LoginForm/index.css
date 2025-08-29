@@ -1,4 +1,4 @@
-.loginForm-container {
+.login-form-container {
   background-color: #000000;
   height: 100vh;
   display: flex;
@@ -15,7 +15,7 @@
   width: 400px;
   height: 300px;
 }
-.loginform-website-logo {
+.login-website-logo {
   width: 100px;
   align-self: center;
   margin-bottom: 20px;

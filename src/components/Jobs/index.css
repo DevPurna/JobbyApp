@@ -29,6 +29,8 @@
   height: 30px;
   width: 90%;
   border: none;
+  outline: none;
+  color: white;
 }
 .job-search-bar {
   background-color: #475569;
